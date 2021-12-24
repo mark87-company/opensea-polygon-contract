@@ -1,0 +1,9 @@
+.git
+artifacts
+cache
+node_modules
+scripts
+.gitignore
+.gitmodules
+hardhat.config.js
+.env

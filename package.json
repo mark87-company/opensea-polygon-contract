@@ -1,0 +1,26 @@
+{
+  "name": "@mk87/opensea-polygon-contract",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "hardhat:compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark87-company/opensea-polygon-contract.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mark87-company/opensea-polygon-contract/issues"
+  },
+  "homepage": "https://github.com/mark87-company/opensea-polygon-contract#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.3",
+    "@openzeppelin/contracts": "4.4.1",
+    "dotenv": "10.0.0",
+    "hardhat": "2.6.8"
+  }
+}
