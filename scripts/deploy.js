@@ -10,8 +10,8 @@ async function deploy(contractName, ...args) {
 }
 
 function saveDeployedContact(contractName, { interface, address }) {
-  fs.writeFile(
-    joinPath(process.cwd(), `deployed-contacts/${contractName}.json`),
+  return fs.writeFile(
+    joinPath(process.cwd(), `deployed-contracts/${contractName}.json`),
     JSON.stringify({
       contractName,
       interface,
@@ -23,7 +23,7 @@ function saveDeployedContact(contractName, { interface, address }) {
 async function main() {
   const MASWhiteLists = await deploy("registryAddress");
 
-  saveDeployedContact("MASWhiteLists", MASWhiteLists);
+  await saveDeployedContact("MASWhiteLists", MASWhiteLists);
 
   const MAS = await deploy(
     "MAS",
@@ -33,11 +33,11 @@ async function main() {
     ""
   );
 
-  saveDeployedContact("MAS", MAS);
+  await saveDeployedContact("MAS", MAS);
 
   const MASRoyalty = await deploy("royalty", MAS.address);
 
-  saveDeployedContact("MASRoyalty", MASRoyalty);
+  await saveDeployedContact("MASRoyalty", MASRoyalty);
 }
 
 main()
