@@ -7,3 +7,9 @@ scripts
 .gitmodules
 hardhat.config.js
 .env
+**.ts
+!deployed-contracts/**.js
+!deployed-contracts/**.d.ts
+MAS_contracts
+tsconfig.json
+contracts
