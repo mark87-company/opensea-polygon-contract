@@ -13,3 +13,4 @@ hardhat.config.js
 MAS_contracts
 tsconfig.json
 contracts
+index.ts

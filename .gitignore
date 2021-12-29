@@ -3,3 +3,5 @@ cache
 artifacts
 .env
 deployed-contracts
+index.js
+index.d.ts
